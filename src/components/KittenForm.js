@@ -73,7 +73,7 @@ const KittenForm = props => {
                         <div className="radio">
                             <input type="radio" className="a-yes" id="a-yes" name="altered" value="true" checked={kitten.altered === "true"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-yes">Yes</label>
-                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={kitten.altered === ""} onChange={props.handleChange} normalize={normalizeBoolean}/>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={kitten.altered === "false"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-no">No</label>
                         </div>
 
@@ -85,7 +85,7 @@ const KittenForm = props => {
                     <div className="radio">
                             <input type="radio" className="m-yes" id="m-yes" value="true" name="microchipped" checked={kitten.microchipped === "true"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="m-yes">Yes</label>
-                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={kitten.microchipped === ""} onChange={props.handleChange} normalize={normalizeBoolean}/>
+                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={kitten.microchipped === "false"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="m-no">No</label>
                     </div>
                 

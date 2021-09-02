@@ -94,7 +94,20 @@ class EditForm extends Component {
 
         this.props.editKitten(id, kitten, onSuccessfulEdit)
 
-        this.setState({ name: '', sex: '', age: '', dob: '', weight: '', breed: '', color: '', pattern: '', altered: '', microchipped: '', intake_date: '', intake_time: '', location_found: '', intake_type: '', status: '', current_location: '', description: '', portrait_url: ''})}
+        this.setState({ name: '', sex: '', age: '', dob: '', weight: '', breed: '', color: '', pattern: '', altered: '', microchipped: '', intake_date: '', intake_time: '', location_found: '', intake_type: '', status: '', current_location: '', description: '', portrait_url: ''})
+    }
+
+    normalizeBoolean = value => {
+        if (value === "true") {
+            return true;
+        }
+    
+        if (value === "false") {
+            return false;
+        }
+    
+        return value;
+    };
 
 
     render() {
@@ -123,9 +136,9 @@ class EditForm extends Component {
                     <label className="input-label">Sex: </label>
 
                     <div className="radio">
-                        <input type="radio" className="male"  id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange}/> 
+                        <input type="radio" className="male"  id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange} /> 
                         <label for="male">Male</label>
-                        <input type="radio" className="female"  id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange}/>
+                        <input type="radio" className="female"  id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange} />
                         <label for="female">Female</label>
                     </div>
                 </div>
@@ -157,9 +170,9 @@ class EditForm extends Component {
                     <label className="input-label">Altered: </label>
 
                         <div className="radio">
-                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="Yes" checked={this.state.altered === "true"} onChange={this.handleChange}/>
+                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="true" checked={this.state.altered === "true"} onChange={this.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-yes">Yes</label>
-                            <input type="radio" className="a-no" id="a-no" name="altered" value="No" checked={this.state.altered === "" } onChange={this.handleChange}/>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={this.state.altered === "false" } onChange={this.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-no">No</label>
                         </div>
                 </div>
@@ -168,9 +181,9 @@ class EditForm extends Component {
                     <label className="input-label">Microchipped: </label>
 
                     <div className="radio">
-                            <input type="radio" className="m-yes" id="m-yes" value="Yes" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange}/> &nbsp;
+                            <input type="radio" className="m-yes" id="m-yes" value="true" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange} normalize={normalizeBoolean}/>
                             <label for="m-yes">Yes</label>
-                            <input type="radio" className="m-no" id="m-no" value="No" name="microchipped" checked={this.state.microchipped === "" } onChange={this.handleChange}/> 
+                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={this.state.microchipped === "false" } onChange={this.handleChange} normalize={normalizeBoolean}/> 
                             <label for="m-no">No</label>
                         </div>
                 
