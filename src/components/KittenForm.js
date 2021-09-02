@@ -4,6 +4,18 @@ const KittenForm = props => {
 
     const kitten = props.kitten
 
+    const normalizeBoolean = value => {
+        if (value === "true") {
+            return true;
+        }
+    
+        if (value === "false") {
+            return false;
+        }
+    
+        return value;
+    };
+
     return (
         <>      
         <form onSubmit={props.handleSubmit}>
@@ -59,9 +71,9 @@ const KittenForm = props => {
                     <label className="input-label">Altered: </label>
 
                         <div className="radio">
-                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="Yes" checked={kitten.altered === "true"} onChange={props.handleChange}/>
+                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="true" checked={kitten.altered === "true"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-yes">Yes</label>
-                            <input type="radio" className="a-no" id="a-no" name="altered" value="No" checked={kitten.altered === ""} onChange={props.handleChange}/>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={kitten.altered === ""} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="a-no">No</label>
                         </div>
 
@@ -71,9 +83,9 @@ const KittenForm = props => {
                     <label className="input-label">Microchipped: </label>
 
                     <div className="radio">
-                            <input type="radio" className="m-yes" id="m-yes" value="Yes" name="microchipped" checked={kitten.microchipped === "true"} onChange={props.handleChange}/>
+                            <input type="radio" className="m-yes" id="m-yes" value="true" name="microchipped" checked={kitten.microchipped === "true"} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="m-yes">Yes</label>
-                            <input type="radio" className="m-no" id="m-no" value="No" name="microchipped" checked={kitten.microchipped === ""} onChange={props.handleChange}/>
+                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={kitten.microchipped === ""} onChange={props.handleChange} normalize={normalizeBoolean}/>
                             <label for="m-no">No</label>
                     </div>
                 
