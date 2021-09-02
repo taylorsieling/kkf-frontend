@@ -156,9 +156,9 @@ class EditForm extends Component {
                     <label className="input-label">Altered: </label>
 
                         <div className="radio">
-                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="Yes" checked={this.state.altered === true} onChange={this.handleChange}/>
+                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="Yes" checked={this.state.altered === "true"} onChange={this.handleChange}/>
                             <label for="a-yes">Yes</label>
-                            <input type="radio" className="a-no" id="a-no" name="altered" value="No" checked={this.state.altered === false } onChange={this.handleChange}/>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="No" checked={this.state.altered === "" } onChange={this.handleChange}/>
                             <label for="a-no">No</label>
                         </div>
                 </div>
@@ -167,9 +167,9 @@ class EditForm extends Component {
                     <label className="input-label">Microchipped: </label>
 
                     <div className="radio">
-                            <input type="radio" className="m-yes" id="m-yes" value="Yes" name="microchipped" checked={this.state.microchipped === true } onChange={this.handleChange}/> &nbsp;
+                            <input type="radio" className="m-yes" id="m-yes" value="Yes" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange}/> &nbsp;
                             <label for="m-yes">Yes</label>
-                            <input type="radio" className="m-no" id="m-no" value="No" name="microchipped" checked={this.state.microchipped === false } onChange={this.handleChange}/> 
+                            <input type="radio" className="m-no" id="m-no" value="No" name="microchipped" checked={this.state.microchipped === "" } onChange={this.handleChange}/> 
                             <label for="m-no">No</label>
                         </div>
                 
