@@ -170,9 +170,9 @@ class EditForm extends Component {
                     <label className="input-label">Altered: </label>
 
                         <div className="radio">
-                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="true" checked={this.state.altered === "true"} onChange={this.handleChange} normalize={normalizeBoolean}/>
+                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="true" checked={this.state.altered === "true"} onChange={this.handleChange} normalize={this.normalizeBoolean}/>
                             <label for="a-yes">Yes</label>
-                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={this.state.altered === "false" } onChange={this.handleChange} normalize={normalizeBoolean}/>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="false" checked={this.state.altered === "false" } onChange={this.handleChange} normalize={this.normalizeBoolean}/>
                             <label for="a-no">No</label>
                         </div>
                 </div>
@@ -181,9 +181,9 @@ class EditForm extends Component {
                     <label className="input-label">Microchipped: </label>
 
                     <div className="radio">
-                            <input type="radio" className="m-yes" id="m-yes" value="true" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange} normalize={normalizeBoolean}/>
+                            <input type="radio" className="m-yes" id="m-yes" value="true" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange} normalize={this.normalizeBoolean}/>
                             <label for="m-yes">Yes</label>
-                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={this.state.microchipped === "false" } onChange={this.handleChange} normalize={normalizeBoolean}/> 
+                            <input type="radio" className="m-no" id="m-no" value="false" name="microchipped" checked={this.state.microchipped === "false" } onChange={this.handleChange} normalize={this.normalizeBoolean}/> 
                             <label for="m-no">No</label>
                         </div>
                 
