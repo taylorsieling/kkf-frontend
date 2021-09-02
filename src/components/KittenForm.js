@@ -118,7 +118,7 @@ const KittenForm = props => {
                 </div>
 
                 <div className="flex-item-left">
-                    <label>Intake Type: </label>
+                    <label className="input-label">Intake Type: </label>
                     <select className="select" name='intake_type' onChange={props.handleChange} value={kitten.intake_type}>
                         <option defaultValue value=''>Choose Type</option>
                         <option value='Stray'>Stray</option>
@@ -128,14 +128,14 @@ const KittenForm = props => {
                 </div>
 
                 <div className="flex-item-right">
-                    <label>Location Found: </label>
+                    <label className="input-label">Location Found: </label>
                     <input type="text" value={kitten.location_found} name="location_found" placeholder="Enter Address" onChange={props.handleChange} required/>
                 </div>
 
                 <div className="flex-item-full"><h3>Adoption Information</h3></div>
         
                 <div className="flex-item-left">
-                    <label>Adoption Status: </label><br/>
+                    <label className="input-label">Adoption Status: </label><br/>
                     <select className="select" name='status' onChange={props.handleChange} value={kitten.status}>
                         <option defaultValue value=''>Choose Status</option>
                         <option value='Unavailable'>Unavailable</option>
@@ -146,7 +146,7 @@ const KittenForm = props => {
                 </div>
 
                 <div className="flex-item-right">
-                    <label>Current Location: </label>
+                    <label className="input-label">Current Location: </label>
                     <select className="select" name='current_location' onChange={props.handleChange} value={kitten.current_location}>
                         <option defaultValue value=''>Choose Location</option>
                         <option value='Foster-Home'>Foster Home</option>
