@@ -1,8 +1,10 @@
+import { API_ROOT } from "../apiRoot"
+
 export const fetchKittens = () => {
 
     return (dispatch) => {
         dispatch({ type: "LOADING_KITTENS"})
-        fetch('http://localhost:3001/kittens')
+        fetch(`${API_ROOT}/kittens`)
         .then(res => res.json())
         .then(kittens => {
             console.log('fetching kittens')
