@@ -29,7 +29,7 @@ export const addKitten = (kitten, onSuccessfulSubmit) => {
             body: JSON.stringify(kitten)
         }
 
-        fetch('http://localhost:3001/kittens', configObj)
+        fetch(`${API_ROOT}/kittens`, configObj)
         .then(res => res.json())
         .then(kitten => {
             console.log('adding kitten')
@@ -53,7 +53,7 @@ export const deleteKitten = (id) => {
             }
         }
         debugger
-        fetch(`http://localhost:3001/kittens/${id}`, configObj)
+        fetch(`${API_ROOT}/kittens/${id}`, configObj)
         .then(() => dispatch({
             type: "KITTEN_DELETED",
             payload: id
@@ -73,7 +73,7 @@ export const editKitten = (id, kitten, onSuccessfulEdit) => {
             body: JSON.stringify(kitten)
         }
 
-        fetch(`http://localhost:3001/kittens/${id}`, configObj)
+        fetch(`${API_ROOT}/kittens/${id}`, configObj)
         .then(res => res.json())
         .then(kitten => {
             console.log('editing kitten')
