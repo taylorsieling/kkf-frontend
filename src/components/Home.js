@@ -13,7 +13,7 @@ const Home = () => {
             </div>
             <div className="main">
                 <div className="row">
-                    <div><img className="side-img" src="https://i.ibb.co/2y953Dp/RPT.png"/></div>
+                    <div><img className="side-img" src="https://i.ibb.co/2y953Dp/RPT.png" alt="Girl smiles at camera while holding two, small kittens."/></div>
                     <div className="info">
                         <h1 className="subtitle">Meet the Foster</h1>
                         <p><br/><strong>I'm Taylor - A kitten foster mom and knitting enthusiast!</strong></p>
