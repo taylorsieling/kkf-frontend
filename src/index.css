@@ -110,6 +110,13 @@ a.button:hover {
   text-align: center;
 }
 
+.search {
+  float: right;
+  margin: 4rem;
+  padding: 3rem;
+  width: 100px;
+}
+
 .navbar {
   text-align: center;
   background-color: #cad9d2;
